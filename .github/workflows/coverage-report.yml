@@ -1,6 +1,6 @@
 name: 'coverage'
 on:
-    pull_request:
+    pull_request_target:
         branches:
             - master
 jobs:
@@ -13,6 +13,4 @@ jobs:
                   test-script: 'yarn test:app'
                   package-manager: yarn
                   github-token: ${{ secrets.GITHUB_TOKEN }}
-                  coverage-file: ./coverage/report.json
-                  base-coverage-file: ./coverage/master/report.json
                   threshold: 65
