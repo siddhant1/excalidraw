@@ -82,7 +82,8 @@ export type ActionName =
   | "zoomOut"
   | "resetZoom"
   | "zoomToFit"
-  | "zoomToSelection"
+  | "zoomToFitSelection"
+  | "zoomToFitSelectionInViewport"
   | "changeFontFamily"
   | "changeTextAlign"
   | "changeVerticalAlign"
@@ -111,10 +112,16 @@ export type ActionName =
   | "unbindText"
   | "hyperlink"
   | "bindText"
-  | "toggleLock"
+  | "unlockAllElements"
+  | "toggleElementLock"
   | "toggleLinearEditor"
   | "toggleEraserTool"
   | "toggleHandTool"
+  | "selectAllElementsInFrame"
+  | "removeAllElementsFromFrame"
+  | "toggleFrameRendering"
+  | "setFrameAsActiveTool"
+  | "createContainerFromText"
   | "wrapTextInContainer";
 
 export type PanelComponentProps = {
